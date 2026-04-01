@@ -1,6 +1,5 @@
 use anchor_lang::{ prelude::*, system_program::{ Transfer, transfer } };
 use crate::errors::VaultError;
-
 #[derive(Accounts)]
 pub struct VaultAction<'info> {
     // mut because we will modify the lamports during the transfer
