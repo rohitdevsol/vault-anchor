@@ -49,10 +49,6 @@ describe("vault", () => {
     const attackerProgram = await getProgramForUser(attacker);
     const user = Keypair.generate();
     const program = await getProgramForUser(user);
-    client.airdrop(
-      attacker.publicKey,
-      BigInt(10 * anchor.web3.LAMPORTS_PER_SOL),
-    );
 
     const [vault] = PublicKey.findProgramAddressSync(
       [Buffer.from("vault"), user.publicKey.toBuffer()],
